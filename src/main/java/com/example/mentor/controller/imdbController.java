@@ -15,7 +15,7 @@ public class imdbController {
     private final imdbService service;
 
     @GetMapping("/imdb")
-    public List<imdbDTO> getMovies(){
+    public imdbDTO getMovies(){
          return service.getPopularMovies();
     }
 

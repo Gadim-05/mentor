@@ -11,6 +11,6 @@ import java.util.List;
 @FeignClient(name = "imdb-service", url = "https://imdb-top-100-movies.p.rapidapi.com")
 public interface IMDBFeignClient {
     @GetMapping
-    List<imdbDTO> getPopularMovies(@RequestHeader("x-rapidapi-host") String host,
+   imdbDTO getPopularMovies(@RequestHeader("x-rapidapi-host") String host,
                                   @RequestHeader("x-rapidapi-key") String key);
 }
