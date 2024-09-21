@@ -1,6 +1,9 @@
 package com.example.mentor.controller;
 
+<<<<<<< HEAD
 import com.example.mentor.exception.CourseNotFoundException;
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 import com.example.mentor.requestDto.CourseRequestDTO;
 import com.example.mentor.responseDto.CourseResponseDTO;
 import com.example.mentor.service.CourseService;
@@ -30,6 +33,7 @@ public class CourseController {
         return courseService.getCourseById(id);
     }
 
+<<<<<<< HEAD
 
     @PutMapping("/update/{id}")
     public CourseResponseDTO updateCourse(@PathVariable Long id, @RequestBody CourseRequestDTO courseRequestDTO) throws CourseNotFoundException {
@@ -40,4 +44,6 @@ public class CourseController {
     public void deleteCourseById(@PathVariable Long id) throws CourseNotFoundException {
         courseService.deleteCourseById(id);
     }
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 }

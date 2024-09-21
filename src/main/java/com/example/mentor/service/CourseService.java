@@ -1,9 +1,12 @@
 package com.example.mentor.service;
 
+<<<<<<< HEAD
 import com.example.mentor.entity.Book;
 import com.example.mentor.entity.Student;
 import com.example.mentor.repository.StudentRepository;
 import com.example.mentor.requestDto.BookRequestDTO;
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 import com.example.mentor.requestDto.CourseRequestDTO;
 import com.example.mentor.responseDto.CourseResponseDTO;
 
@@ -22,7 +25,11 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CourseService {
 
+<<<<<<< HEAD
     private final StudentRepository studentRepository;
+=======
+
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
     private final CourseRepository courseRepository;
     private final ModelMapper modelMapper;
 
@@ -35,8 +42,11 @@ public class CourseService {
         return "Successfully created!!!";
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
     public List<CourseResponseDTO> getAllCourses(){
         List<Course> all = courseRepository.findAll();
 
@@ -55,6 +65,7 @@ public class CourseService {
 
         return map;
     }
+<<<<<<< HEAD
     public CourseResponseDTO updateCourse(Long id, CourseRequestDTO courseRequestDTO) throws CourseNotFoundException {
         Course existingCourse = courseRepository.findById(id)
                 .orElseThrow(() -> new CourseNotFoundException("Course not found with id " + id));
@@ -71,4 +82,7 @@ public class CourseService {
         }
         courseRepository.deleteById(id);
     }
+=======
+
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 }

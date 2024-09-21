@@ -14,5 +14,9 @@ public class BookRequestDTO {
     private String title;
     private String author;
     private LocalDate publishedDate;
+<<<<<<< HEAD
 //    private Long studentId;
+=======
+    private Long studentId;
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 }

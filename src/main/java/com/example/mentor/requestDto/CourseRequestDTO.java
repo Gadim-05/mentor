@@ -10,7 +10,10 @@ import lombok.*;
 public class CourseRequestDTO {
     private String name;
     private String description;
+<<<<<<< HEAD
 //    private Long studentId;
 
 
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 }

@@ -1,8 +1,16 @@
 package com.example.mentor.repository;
 
+<<<<<<< HEAD
 import com.example.mentor.entity.Student;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+=======
+import com.example.mentor.entity.Course;
+import com.example.mentor.entity.Student;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 import org.springframework.stereotype.Repository;
 
 import java.time.LocalDate;

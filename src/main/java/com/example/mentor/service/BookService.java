@@ -23,8 +23,13 @@ public class BookService {
 
     public String createBook(BookRequestDTO bookRequestDTO){
         Book book = modelMapper.map(bookRequestDTO,Book.class);
+<<<<<<< HEAD
 
 
+=======
+        Student student = studentRepository.findById(bookRequestDTO.getStudentId()).orElseThrow();
+        book.setStudent(student);
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
         bookRepository.save(book);
         return "successfully created";
     }
@@ -41,6 +46,10 @@ public class BookService {
     public BookResponseDTO getBooksByStudentId(Long studentId){
        Book book = bookRepository.findBookByStudentId(studentId);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
         BookResponseDTO map = modelMapper.map(book,BookResponseDTO.class);
         return map;
 

@@ -36,12 +36,18 @@ public class Student {
 
 
     @OneToOne
+<<<<<<< HEAD
     @JsonIgnore
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
     @JoinColumn(name = "address_id")
     private Address address;
 
     @ManyToMany
+<<<<<<< HEAD
     @JsonIgnore
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
     @JoinTable(
             name = "student_course",
             joinColumns = @JoinColumn(name = "student_id"),
@@ -49,8 +55,14 @@ public class Student {
     )
     private List<Course> courses;
 
+<<<<<<< HEAD
     @OneToMany(fetch = FetchType.LAZY,cascade = CascadeType.ALL)
     @JoinColumn(name = "student_id")
+=======
+    @OneToMany(mappedBy = "student",
+            fetch = FetchType.LAZY,
+            cascade = CascadeType.ALL)
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
     @JsonIgnore
     private List<Book> books;
 

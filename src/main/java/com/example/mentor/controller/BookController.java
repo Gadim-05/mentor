@@ -29,10 +29,13 @@ public class BookController {
     }
 
 
+<<<<<<< HEAD
     @GetMapping("/getBooks/{studentId}")
     public BookResponseDTO getBooksByStudentId(@PathVariable Long studentId){
         return bookService.getBooksByStudentId(studentId);
     }
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 
 
 

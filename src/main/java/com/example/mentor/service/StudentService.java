@@ -1,30 +1,42 @@
 package com.example.mentor.service;
 
+<<<<<<< HEAD
 import com.example.mentor.entity.Book;
 import com.example.mentor.entity.Course;
 import com.example.mentor.repository.BookRepository;
 import com.example.mentor.repository.CourseRepository;
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 import com.example.mentor.requestDto.StudentRequestDTO;
 import com.example.mentor.responseDto.StudentResponseDTO;
 import com.example.mentor.entity.Student;
 import com.example.mentor.exception.StudentNotFoundException;
 import com.example.mentor.repository.StudentRepository;
+<<<<<<< HEAD
 import lombok.RequiredArgsConstructor;
+=======
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+<<<<<<< HEAD
 import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
+=======
+
+@Service
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
 public class StudentService {
 
     private final StudentRepository studentRepository;
 
     private final ModelMapper modelMapper;
 
+<<<<<<< HEAD
     private final BookRepository bookRepository;
     private final CourseRepository courseRepository;
 
@@ -56,6 +68,18 @@ public class StudentService {
         student.setCourses(studentCourses);
 
         Student savedStudent = studentRepository.save(student);
+=======
+    public StudentService(StudentRepository studentRepository, ModelMapper modelMapper) {
+        this.studentRepository = studentRepository;
+        this.modelMapper = modelMapper;
+    }
+
+    public StudentResponseDTO createStudent(StudentRequestDTO studentRequestDTO) {
+
+        Student s = modelMapper.map(studentRequestDTO, Student.class);
+        Student savedStudent = studentRepository.save(s);
+
+>>>>>>> f87d312a73f65d05db300721412dc7b7ebaa0649
         return modelMapper.map(savedStudent, StudentResponseDTO.class);
     }
 
