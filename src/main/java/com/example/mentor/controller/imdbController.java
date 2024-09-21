@@ -17,6 +17,10 @@ public class imdbController {
     @GetMapping("/imdb")
     public imdbDTO getMovies(){
          return service.getPopularMovies();
+
+
+
+
     }
 
 }
